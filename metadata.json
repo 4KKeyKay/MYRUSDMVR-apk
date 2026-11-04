@@ -1,0 +1,6 @@
+{
+  "name": "MVR Currency Profit Calculator",
+  "description": "Three-currency profit calculator for MYR card withdrawals, USD debt settlement, and MVR exchange.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
