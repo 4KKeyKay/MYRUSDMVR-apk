@@ -63,6 +63,8 @@ jobs:
             echo "::error::Failed to create ./debug.keystore"
             exit 1
           fi
+          mkdir -p ~/.android
+          cp ./debug.keystore ~/.android/debug.keystore
           echo "Temporary debug keystore verified."
 
       - name: Build the debug APK

@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MVR Currency Profit Calculator"
+rootProject.name = "mvr-profit-calculator"
 include(":app")

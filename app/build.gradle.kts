@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -19,9 +18,9 @@ android {
 
     signingConfigs {
         getByName("debug") {
-            val rootKeystore = rootProject.file("debug.keystore")
-            if (rootKeystore.exists()) {
-                storeFile = rootKeystore
+            val rootKs = rootProject.file("debug.keystore")
+            if (rootKs.exists()) {
+                storeFile = rootKs
                 storePassword = "android"
                 keyAlias = "androiddebugkey"
                 keyPassword = "android"
@@ -47,14 +46,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    kotlinOptions {
-        jvmTarget = "17"
-    }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.webkit)
